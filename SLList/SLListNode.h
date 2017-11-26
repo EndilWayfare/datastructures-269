@@ -5,11 +5,12 @@ template <typename T>
 class SLListNode 
 {
 public:
-	SLListNode();
-	~SLListNode();
+	SLListNode(T data) : data(data) {  }
+	SLListNode() : SLListNode(T()) {  }
 
-	
+	SLListNode<T>* next;
 
+	T data;
 };
 
 #endif // !ENDIL_SLLISTNODE
